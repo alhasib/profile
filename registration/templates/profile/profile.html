@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    {% if profile %}
+          <p>{{ profile.email }}</p>
+          <p>{{ profile.phone }}</p>
+          <p>{{ profile.name }}</p>
+        <p>{{ profile.area }}</p>
+
+    {% else %}
+         {{ errmsg }}
+         <p><a href="{% url "createprofile"%}">Crateprofile</a></p>
+    {% endif %}
+
+  </body>
+</html>
